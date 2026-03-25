@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class QuestionService {
     Question[] questions = new Question[5];
+    String selection[] = new String[5];
 
     public QuestionService() {
         questions[0] = new Question(1, "What is the capital of France?", "Paris", "London", "Berlin", "Madrid", "Paris");
@@ -9,9 +12,23 @@ public class QuestionService {
         questions[4] = new Question(5, "What is the capital of Portugal?", "Lisbon", "London", "Berlin", "Paris", "Lisbon");
     }
 
-    public void displayQuestions() {
+    public void playQuiz() {
+        int i = 0;
         for (Question question : questions) {
-            System.out.println(question);
+            System.out.println("Question Number: " + question.getId());
+            System.out.println("Question: " + question.getQuestion());
+            System.out.println("Options: ");
+            System.out.println("1. " + question.getOption1());
+            System.out.println("2. " + question.getOption2());
+            System.out.println("3. " + question.getOption3());
+            System.out.println("4. " + question.getOption4());
+            System.out.println("--------------------------------");
+            Scanner scanner = new Scanner(System.in);
+            selection[i] = scanner.nextLine();
+            i++;
+        }
+        for (String selection : selection) {
+            System.out.println(selection);
         }
     }
 }
