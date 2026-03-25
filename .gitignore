@@ -1,0 +1,28 @@
+# Compiled / output
+*.class
+bin/
+out/
+
+# Maven / Gradle
+target/
+build/
+.gradle/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code / Cursor
+.vscode/
+.cursor/
+
+# OS / JVM noise
+.DS_Store
+Thumbs.db
+hs_err_pid*
+replay_pid*
