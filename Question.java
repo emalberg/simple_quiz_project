@@ -7,6 +7,17 @@ public class Question {
     private String option4;
     private String answer;
     
+    public Question(int id, String question, String option1, String option2, String option3, String option4,
+            String answer) {
+        this.id = id;
+        this.question = question;
+        this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
+        this.option4 = option4;
+        this.answer = answer;
+    }
+
     public int getId() {
         return id;
     }
@@ -49,4 +60,12 @@ public class Question {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    @Override
+    public String toString() {
+        return "Question [id=" + id + ", question=" + question + ", option1=" + option1 + ", option2=" + option2
+                + ", option3=" + option3 + ", option4=" + option4 + ", answer=" + answer + "]";
+    }
+
+    
 }
